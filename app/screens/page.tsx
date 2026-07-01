@@ -1,9 +1,11 @@
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import ScreenFlowsTable from "@/components/dashboard/ScreenFlowsTable";
 import PageHeader from "@/components/common/PageHeader";
+import ProtectedRoute from "../components/auth/ProtectedRoute";
 
 export default function ScreensPage() {
   return (
+    <ProtectedRoute>
     <DashboardLayout>
       <section>
         <PageHeader
@@ -15,5 +17,6 @@ export default function ScreensPage() {
         <ScreenFlowsTable />
       </section>
     </DashboardLayout>
+    </ProtectedRoute>
   );
 }

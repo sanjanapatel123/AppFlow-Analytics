@@ -1,9 +1,11 @@
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import AppFlowGraph from "@/components/graph/AppFlowGraph";
 import PageHeader from "@/components/common/PageHeader";
+import ProtectedRoute from "../components/auth/ProtectedRoute";
 
 export default function FlowPage() {
   return (
+    <ProtectedRoute>
     <DashboardLayout>
       <section>
         <PageHeader
@@ -15,5 +17,6 @@ export default function FlowPage() {
         <AppFlowGraph />
       </section>
     </DashboardLayout>
+    </ProtectedRoute>
   );
 }
